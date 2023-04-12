@@ -1,4 +1,8 @@
 # Byte-compiled / optimized / DLL files
+
+eons_project/secrets.py
+
+
 __pycache__/
 *.py[cod]
 *$py.class
