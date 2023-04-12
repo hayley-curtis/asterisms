@@ -1,0 +1,53 @@
+{% extends "asterisms/base.html" %}
+{% load static %}
+{% block nav-home %}active{% endblock %}
+{% load asterisms_extra_filters %}
+{% load asterisms_remove_culture_designation %}
+
+
+{% block title %} Asterisms {% endblock %}
+
+{% block body %}
+
+
+<body>
+<br>
+<br>
+<br>
+
+<h1> {{ a|rem_desig }}  </h1>
+<br>
+<br>
+
+<div class="row"> 
+    <div class="col-8" id="startable">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th> star hip </th>
+                    <th> star ra </th>
+                    <th> star dec </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if stars_list%}
+                {% for star in stars_list %}
+                    <tr>
+                        <td> {{ star.star_hip }}</td>
+                        <td> {{ star.star_ra }}</td>
+                        <td> {{ star.star_dec }}</td>
+                    </tr>
+            {% endfor %}
+            {% endif %} 
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+{% endblock %}
+
+
+
+
+

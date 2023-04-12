@@ -1,0 +1,115 @@
+
+/* global styles */
+    
+    body {
+        font-family:Georgia, 'Times New Roman', Times, serif
+    }
+
+    h1 {
+        text-align: center;
+    }   
+
+    h4 {
+        text-align: center;
+    }
+
+
+
+/* nav bar styles */
+
+ .navbar-brand {
+            color: forestgreen;
+        }
+  .navbar-list li {
+            color: forestgreen;
+            list-style: none;
+            display: inline;
+        }
+
+
+
+
+/* index page styles */
+    figure.culturefigure {
+        width: 100%;
+        text-align: center;
+        display: block;
+        position: relative;
+        border-bottom: 3px;
+    }
+
+    #about {
+        text-align: center;
+    }
+
+    #thingstodo {
+        text-align: left;
+        color: darkslategray;
+    }
+
+    .col-4 {
+        text-align: left;
+        margin: auto;
+    }
+
+
+    
+
+
+/* culture styles */
+    figure.asterismfigure {
+        width: 100%;
+        text-align: center;
+        display: block;
+        position: relative;
+        border-bottom: 3px;
+    }
+
+
+
+
+
+/* asterism styles */
+    #startable {
+        text-align: center;
+        margin: auto;
+    }     
+
+
+
+/* about page  */
+      
+    .col-10 {
+        text-align: center;
+        margin: auto;
+    }
+        
+    #dunhuang {
+        width: 70%;
+        margin: auto;
+        padding-top: 10%;
+
+       
+
+    }
+    figcaption {
+        text-align: center;
+    }
+
+    #whyasterisms{
+        padding: 5%;
+        padding-left: 7%;
+        padding-right: 2%;
+        display: inline;
+    }
+    #boundaries {
+        margin: auto;
+        padding-right: 5%;
+
+    }
+    #pleiades {
+        padding: 10%;
+        margin: auto;
+    }
+       
+       

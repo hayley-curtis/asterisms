@@ -1,0 +1,38 @@
+{% extends "asterisms/base.html" %}
+{% load static %}
+{% block nav-home %}active{% endblock %}
+{% load asterisms_extra_filters %}
+{% load asterisms_remove_culture_designation %}
+
+
+{% block title %} Cultures {% endblock %}
+
+{% block body %}
+<body>
+<br>
+<br>
+<br>
+
+<h1> {{ c|name_format }} Asterisms </h1>
+<br>
+<br>
+
+<div class="container">
+    <div class="row"> 
+        {% if asterism_list %}
+                {% for asterism in asterism_list%}
+                <div class="col-3">
+                    <figure class="asterismfigure">
+                        <a href= "{{ asterism }}/"> 
+                            <img src="{% static "asterisms/images/starexamplebright.jpeg" %}" alt="example image" class="img-thumbnail">
+                            <figcaption> {{ asterism.asterism_name|rem_desig }} </figcaption>
+                        </a>
+                    </figure>
+                </div>
+                {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+
+</body>
+{% endblock %}

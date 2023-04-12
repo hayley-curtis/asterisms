@@ -1,0 +1,72 @@
+{% extends "asterisms/base.html" %}
+{% load static %}
+{% block nav-home %}active{% endblock %}
+{% block title %}Sky Cultures Home{% endblock %}
+{% block body %}
+
+<br>
+<br>
+<br>
+
+<h1> eons: elevating observers of the night sky <br> </h1>
+    <div class="row" id="about">
+        <div class="column-10" id="about">
+            <br>
+            <br>
+            <p> sky cultures is a database of world asterisms, along with their myths, stories, and other cultural information. </p>
+            <p> something here about sorting by alphabetically or geographic location </p>
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row"> 
+        {% if culture_list %}
+            {% for culture in culture_list%}
+                <div class="col-3">
+                    <figure class="culturefigure">
+                        <a href= "{{ culture.culture_name|lower }}/"> 
+                            <img src="{% static "asterisms/images/starexample.jpeg" %}" alt="example image" class="img-thumbnail">
+                            <figcaption> {{ culture.culture_name|lower }} </figcaption>
+                        </a>
+                    </figure>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="col-4" id="thingstodo">
+    <h5> things i need to do</h5>
+    <ul>
+        <li>move all styles to external style sheet // clean up html </li>
+        <li>re-format models </li>
+            <ul>
+                <li>make fields for descriptions, images</li>
+                <li> delete existing database, migrate models, re-import data</li>
+            </ul>
+        <li>fix inconsistencies in names spellings, moon stations etc. </li>
+            <ul>
+                <li>check spellings</li>
+                <li>moon stations</li>
+                <li> error in csv file with extra quotation marks</li>
+            </ul>
+        <li>how to deal with duplicate names? e.g. chinese well vs japanese well -- maybe a loop to check if it exists and add one something to differentiate?</li>
+        <li>re-create superuser -- have to do this every time I delete database and migrate</li>
+        <li>photo citation? what photos can I use?</li>
+        <li>create some sample cultures/asterisms as proof of concept</li>
+        <li>how to search for items in database/filter by geographic area </li>
+        <li>footer</li>
+        <li> responsive style/containers?</li>
+    </ul>
+</div>
+
+{% endblock %}
